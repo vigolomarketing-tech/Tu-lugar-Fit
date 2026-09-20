@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>TU Lugar Fit — Equipamiento de gimnasio y artículos deportivos</title>
+<meta name="description" content="Catálogo online de TU Lugar Fit: equipamiento de gimnasio, funcional, boxeo, pelotas y más. Armá tu pedido y lo recibís por WhatsApp." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-mark">💪</span>
+      <span class="brand-name">TU Lugar<span class="accent">Fit</span></span>
+    </div>
+    <a class="btn btn-whatsapp header-whatsapp" id="headerWhatsapp" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M17.6 6.32A8.86 8.86 0 0 0 3.05 16.9L2 21l4.2-1.1a8.86 8.86 0 0 0 12.7-7.93 8.8 8.8 0 0 0-1.3-5.65Zm-5.6 13.6a7.35 7.35 0 0 1-3.75-1.03l-.27-.16-2.79.73.75-2.72-.18-.28a7.38 7.38 0 1 1 13.7-3.87 7.37 7.37 0 0 1-7.46 7.33Zm4.04-5.53c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06a6.02 6.02 0 0 1-1.77-1.09 6.6 6.6 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.4.06-.6.28-.2.22-.8.78-.8 1.9s.82 2.2.94 2.35c.11.15 1.6 2.45 3.89 3.44.54.23.97.37 1.3.48.55.17 1.04.15 1.44.09.44-.07 1.3-.53 1.48-1.04.18-.51.18-.95.13-1.04-.06-.1-.2-.15-.42-.26Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>Equipamiento para entrenar<br>en casa, en el gym <span class="accent">o al aire libre</span></h1>
+    <p>Elegí tus productos, armá el pedido y coordinamos todo por WhatsApp. Sin registros, sin vueltas.</p>
+    <a href="#catalogo" class="btn btn-accent">Ver catálogo ↓</a>
+  </div>
+</section>
+
+<main id="catalogo" class="container">
+
+  <div class="toolbar">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M10 2a8 8 0 1 0 4.9 14.32l5.39 5.39 1.41-1.42-5.39-5.38A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z"/></svg>
+      <input type="search" id="searchInput" placeholder="Buscar producto…" autocomplete="off" />
+    </div>
+    <div class="chips-scroll" id="categoryChips" role="tablist" aria-label="Categorías">
+      <!-- chips injected by app.js -->
+    </div>
+  </div>
+
+  <p class="results-count" id="resultsCount"></p>
+
+  <div class="product-grid" id="productGrid">
+    <!-- product cards injected by app.js -->
+  </div>
+
+  <p class="no-results" id="noResults" hidden>No encontramos productos con esa búsqueda. Probá con otra palabra o categoría.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name">TU Lugar<span class="accent">Fit</span></span>
+      <p>Equipamiento de gimnasio y artículos deportivos.</p>
+    </div>
+    <div class="footer-contact">
+      <a id="footerWhatsapp1" href="#" target="_blank" rel="noopener" class="footer-link">📱 WhatsApp: <span id="wa1Display"></span></a>
+      <a id="footerWhatsapp2" href="#" target="_blank" rel="noopener" class="footer-link">📱 WhatsApp: <span id="wa2Display"></span></a>
+      <a id="footerInstagram" href="#" target="_blank" rel="noopener" class="footer-link">📷 <span id="igDisplay"></span></a>
+    </div>
+  </div>
+  <p class="price-disclaimer" id="priceDisclaimer"></p>
+</footer>
+
+<!-- Botón flotante del carrito -->
+<button class="cart-fab" id="cartFab" aria-haspopup="dialog" aria-controls="cartDrawer">
+  <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M7 4h-2l-.94 2H2v2h1.28l3.4 7.59-1.28 2.32C5.16 18.87 5.6 20 6.6 20H19v-2H7.42a.25.25 0 0 1-.22-.37L8.1 16h8.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 21 7H5.53l-.94-2Z M7 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg>
+  <span class="cart-fab-count" id="cartCount">0</span>
+  <span class="cart-fab-total" id="cartTotal">$0</span>
+</button>
+
+<!-- Carrito -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Carrito de compra" aria-hidden="true">
+  <div class="cart-drawer-header">
+    <h2>Tu pedido</h2>
+    <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+  </div>
+
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty" id="cartEmptyMsg">Todavía no agregaste productos.</p>
+  </div>
+
+  <div class="cart-summary">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <strong id="cartSummaryTotal">$0</strong>
+    </div>
+
+    <form id="cartForm" class="cart-form">
+      <label>
+        Nombre *
+        <input type="text" id="clienteNombre" name="nombre" required placeholder="¿Cómo te llamás?" />
+      </label>
+      <label>
+        Zona / Barrio
+        <input type="text" id="clienteZona" name="zona" placeholder="Ej: Quilmes, San Fernando…" />
+      </label>
+      <label>
+        Comentario (opcional)
+        <textarea id="clienteComentario" name="comentario" rows="2" placeholder="Aclaraciones, horario de retiro, etc."></textarea>
+      </label>
+      <button type="submit" class="btn btn-whatsapp btn-block" id="enviarPedidoBtn">
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M17.6 6.32A8.86 8.86 0 0 0 3.05 16.9L2 21l4.2-1.1a8.86 8.86 0 0 0 12.7-7.93 8.8 8.8 0 0 0-1.3-5.65Zm-5.6 13.6a7.35 7.35 0 0 1-3.75-1.03l-.27-.16-2.79.73.75-2.72-.18-.28a7.38 7.38 0 1 1 13.7-3.87 7.37 7.37 0 0 1-7.46 7.33Zm4.04-5.53c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06a6.02 6.02 0 0 1-1.77-1.09 6.6 6.6 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.4.06-.6.28-.2.22-.8.78-.8 1.9s.82 2.2.94 2.35c.11.15 1.6 2.45 3.89 3.44.54.23.97.37 1.3.48.55.17 1.04.15 1.44.09.44-.07 1.3-.53 1.48-1.04.18-.51.18-.95.13-1.04-.06-.1-.2-.15-.42-.26Z"/></svg>
+        Enviar pedido por WhatsApp
+      </button>
+    </form>
+  </div>
+</aside>
+
+<template id="productCardTemplate">
+  <article class="product-card">
+    <div class="product-image-wrap">
+      <img class="product-image" loading="lazy" decoding="async" />
+    </div>
+    <div class="product-info">
+      <h3 class="product-name"></h3>
+      <p class="product-unit-badge" hidden></p>
+      <p class="product-price"></p>
+      <div class="product-actions">
+        <div class="qty-stepper">
+          <button type="button" class="qty-btn qty-minus" aria-label="Restar">−</button>
+          <span class="qty-value">1</span>
+          <button type="button" class="qty-btn qty-plus" aria-label="Sumar">+</button>
+        </div>
+        <button type="button" class="btn btn-accent btn-add">Agregar</button>
+      </div>
+    </div>
+  </article>
+</template>
+
+<template id="cartItemTemplate">
+  <div class="cart-item">
+    <img class="cart-item-image" loading="lazy" />
+    <div class="cart-item-info">
+      <p class="cart-item-name"></p>
+      <p class="cart-item-unit-price"></p>
+      <div class="cart-item-row">
+        <div class="qty-stepper qty-stepper-sm">
+          <button type="button" class="qty-btn qty-minus" aria-label="Restar">−</button>
+          <span class="qty-value">1</span>
+          <button type="button" class="qty-btn qty-plus" aria-label="Sumar">+</button>
+        </div>
+        <span class="cart-item-subtotal"></span>
+        <button type="button" class="cart-item-remove" aria-label="Quitar producto">🗑</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
