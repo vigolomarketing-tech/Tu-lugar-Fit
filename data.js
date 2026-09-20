@@ -28,6 +28,7 @@ const CATEGORIAS = [
   "Fitness",
   "Artículos",
   "Pelotas",
+  "Accesorios deportivos",
   "Otros",
   "Pileta",
 ];
@@ -347,7 +348,7 @@ const PRODUCTOS = [
   },
   {
     id: 40,
-    nombre: "Barra hueca con topes de 1,20 cm, pintadas con pintura epoxi",
+    nombre: "Barra hueca con topes de 1,20 m, pintadas con pintura epoxi",
     categoria: "Barras",
     precio: 24000,
     unidad: null,
@@ -363,7 +364,7 @@ const PRODUCTOS = [
   },
   {
     id: 42,
-    nombre: "Barra hueca con topes 1,50 cm, pintadas con pintura epoxi",
+    nombre: "Barra hueca con topes 1,50 m, pintadas con pintura epoxi",
     categoria: "Barras",
     precio: 28000,
     unidad: null,
@@ -835,7 +836,7 @@ const PRODUCTOS = [
   },
   {
     id: 101,
-    nombre: "Kit body 60 kg con barra de 1,50 y mancuernas de PVC a rosca ( 4 discos de 10 kg y 4 discos de",  // REVISAR: descripción cortada en el PDF original (se corta en '... y 4 discos de')
+    nombre: "Kit body 60 kg con barra de 1,50 m y mancuernas de PVC a rosca",  // REVISAR: en el PDF original la descripción venía cortada con detalle de discos ("... 4 discos de 10 kg y 4 discos de"); se sacó el detalle hasta confirmar con el cliente
     categoria: "Body pump y discos",
     precio: 145000,
     unidad: null,
@@ -1396,7 +1397,7 @@ const PRODUCTOS = [
   {
     id: 171,
     nombre: "Pechera de poliamida x10 unidades. \"TSP\" t grande",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 55000,
     unidad: null,
     imagen: "img/productos/171-pechera-de-poliamida-x10-unidades-tsp-t-grande.jpeg",
@@ -1508,7 +1509,7 @@ const PRODUCTOS = [
   {
     id: 185,
     nombre: "Tarjetas de árbitro",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 5500,
     unidad: null,
     imagen: "img/productos/185-tarjetas-de-arbitro.jpeg",
@@ -1516,7 +1517,7 @@ const PRODUCTOS = [
   {
     id: 186,
     nombre: "Cinta de capitán importada",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 8000,
     unidad: null,
     imagen: "img/productos/186-cinta-de-capitan-importada.jpeg",
@@ -1524,7 +1525,7 @@ const PRODUCTOS = [
   {
     id: 187,
     nombre: "Silbato Fox 40",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 5300,
     unidad: null,
     imagen: "img/productos/187-silbato-fox-40.png",
@@ -1532,7 +1533,7 @@ const PRODUCTOS = [
   {
     id: 188,
     nombre: "Mini inflador",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 5700,
     unidad: null,
     imagen: "img/productos/188-mini-inflador.png",
@@ -1540,7 +1541,7 @@ const PRODUCTOS = [
   {
     id: 189,
     nombre: "Casco niño Alpine Skate",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 21000,
     unidad: null,
     imagen: "img/productos/189-casco-nino-alpine-skate.png",
@@ -1548,7 +1549,7 @@ const PRODUCTOS = [
   {
     id: 190,
     nombre: "Casco smart niño importado",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 17000,
     unidad: null,
     imagen: "img/productos/190-casco-smart-nino-importado.jpeg",
@@ -1556,7 +1557,7 @@ const PRODUCTOS = [
   {
     id: 191,
     nombre: "Luz LED para bici",
-    categoria: "Pelotas",
+    categoria: "Accesorios deportivos",
     precio: 5800,
     unidad: null,
     imagen: "img/productos/191-luz-led-para-bici.jpeg",
